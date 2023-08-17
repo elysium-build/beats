@@ -1,0 +1,9 @@
+This module collects statistical data from Squid by using the cache_object protocol. It supports
+collection from using TCP sockets without basic authentication.
+
+To configure Squid to collect data, you must enable the info module, it can
+be done by enabling a TCP socket.
+
+Metricbeat can collect one metric sets from Squid which called `info`
+
+The Squid metricsets are tested with Squid version 4.8.

@@ -158,6 +158,8 @@ import (
 	_ "github.com/elastic/beats/v7/metricbeat/module/redis/info"
 	_ "github.com/elastic/beats/v7/metricbeat/module/redis/key"
 	_ "github.com/elastic/beats/v7/metricbeat/module/redis/keyspace"
+	_ "github.com/elastic/beats/v7/metricbeat/module/squid"
+	_ "github.com/elastic/beats/v7/metricbeat/module/squid/info"
 	_ "github.com/elastic/beats/v7/metricbeat/module/system"
 	_ "github.com/elastic/beats/v7/metricbeat/module/system/core"
 	_ "github.com/elastic/beats/v7/metricbeat/module/system/cpu"
