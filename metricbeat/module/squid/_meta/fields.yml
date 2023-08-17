@@ -1,0 +1,11 @@
+- key: squid
+  title: "squid"
+  release: beta
+  description: >
+    Squid module
+  fields:
+    - name: squid
+      type: group
+      description: >
+        Squid metrics
+      fields:
