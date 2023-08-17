@@ -949,6 +949,13 @@ metricbeat.modules:
   # Client certificate key file
   #ssl.key: "/etc/pki/client/cert.key"
 
+#-------------------------------- Squid Module --------------------------------
+- module: squid
+  metricsets: ["info"]
+  enabled: false
+  period: 10s
+  hosts: ["tcp://127.0.0.1:3128"]
+
 #------------------------------- Traefik Module -------------------------------
 - module: traefik
   metricsets: ["health"]

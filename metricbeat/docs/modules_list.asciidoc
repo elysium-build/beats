@@ -270,6 +270,8 @@ This file is generated! See scripts/mage/docs_collector.go
 |<<metricbeat-metricset-redisenterprise-proxy,proxy>> beta[]  
 |<<metricbeat-module-sql,SQL>>     |image:./images/icon-no.png[No prebuilt dashboards]    |  
 .1+| .1+|  |<<metricbeat-metricset-sql-query,query>>   
+|<<metricbeat-module-squid,squid>>  beta[]   |image:./images/icon-no.png[No prebuilt dashboards]    |  
+.1+| .1+|  |<<metricbeat-metricset-squid-info,info>> beta[]  
 |<<metricbeat-module-stan,Stan>>     |image:./images/icon-yes.png[Prebuilt dashboards are available]    |  
 .3+| .3+|  |<<metricbeat-metricset-stan-channels,channels>>   
 |<<metricbeat-metricset-stan-stats,stats>>   
@@ -377,6 +379,7 @@ include::modules/rabbitmq.asciidoc[]
 include::modules/redis.asciidoc[]
 include::modules/redisenterprise.asciidoc[]
 include::modules/sql.asciidoc[]
+include::modules/squid.asciidoc[]
 include::modules/stan.asciidoc[]
 include::modules/statsd.asciidoc[]
 include::modules/syncgateway.asciidoc[]
