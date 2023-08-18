@@ -1,0 +1,9 @@
+# Module: opendistro
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/main/metricbeat-module-opendistro.html
+
+- module: opendistro
+  metricsets: ["node_stats"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
