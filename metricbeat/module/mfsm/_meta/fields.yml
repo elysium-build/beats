@@ -1,0 +1,10 @@
+- key: mfsm
+  title: "mfsm"
+  release: beta
+  description: >
+    mfsm module
+  fields:
+    - name: mfsm
+      type: group
+      description: >
+      fields:
