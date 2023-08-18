@@ -88,7 +88,7 @@ func (c *Client) run(cmd string) (*bytes.Buffer, error) {
 	rBody := []string{
 		fmt.Sprintf(requestProtocol, cmd),
 		"Host: localhost",
-		"User-Agent: squidclient/3.5.12",
+		"User-Agent: squidclient/5.5",
 	}
 
 	rBody = append(rBody, "Accept: */*", "\r\n")
