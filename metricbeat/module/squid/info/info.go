@@ -1,10 +1,11 @@
 package info
 
 import (
+	"fmt"
+
 	"github.com/elastic/beats/v7/libbeat/common/cfgwarn"
 	"github.com/elastic/beats/v7/metricbeat/mb"
 	"github.com/elastic/beats/v7/metricbeat/module/squid"
-	"github.com/pkg/errors"
 )
 
 // init registers the MetricSet with the central registry as soon as the program
@@ -44,17 +45,17 @@ func New(base mb.BaseMetricSet) (mb.MetricSet, error) {
 func (m *MetricSet) Fetch(report mb.ReporterV2) error {
 	client, err := squid.NewSquidClient(m.HostData().URI)
 	if err != nil {
-		return errors.Wrap(err, "failed creating squid client")
+		return fmt.Errorf("failed creating squid client")
 	}
 
 	res, err := client.GetInfo()
 	if err != nil {
-		return errors.Wrap(err, "failed fetching squid info")
+		return fmt.Errorf("failed fetching squid info")
 	}
 
 	event, err := eventMapping(res, report)
 	if err != nil {
-		return errors.Wrap(err, "error in mapping")
+		return fmt.Errorf("error in mapping")
 	}
 
 	report.Event(event)

@@ -2,9 +2,9 @@ package mbeaninfo
 
 import (
 	"bytes"
+	"fmt"
 	"strings"
 
-	"github.com/pkg/errors"
 	"golang.org/x/net/html"
 
 	s "github.com/elastic/beats/v7/libbeat/common/schema"
@@ -45,7 +45,7 @@ func eventMapping(content *[]byte, hostname string) (mapstr.M, error) {
 	}
 
 	if len(row) == 0 {
-		return nil, errors.New("error parse html")
+		return nil, fmt.Errorf("error parse html")
 	}
 
 	fullEvent := map[string]interface{}{}
@@ -59,7 +59,7 @@ func eventMapping(content *[]byte, hostname string) (mapstr.M, error) {
 
 	fields, err := schema.Apply(fullEvent)
 	if err != nil {
-		return nil, errors.Wrap(err, "error applying schema")
+		return nil, fmt.Errorf("error applying schema")
 	}
 
 	return fields, nil
