@@ -1,0 +1,9 @@
+# Module: mfsm
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/main/metricbeat-module-mfsm.html
+
+- module: mfsm
+  metricsets: ["mbeaninfo"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

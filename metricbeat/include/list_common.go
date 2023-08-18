@@ -112,6 +112,8 @@ import (
 	_ "github.com/elastic/beats/v7/metricbeat/module/logstash/node_stats"
 	_ "github.com/elastic/beats/v7/metricbeat/module/memcached"
 	_ "github.com/elastic/beats/v7/metricbeat/module/memcached/stats"
+	_ "github.com/elastic/beats/v7/metricbeat/module/mfsm"
+	_ "github.com/elastic/beats/v7/metricbeat/module/mfsm/mbeaninfo"
 	_ "github.com/elastic/beats/v7/metricbeat/module/mongodb"
 	_ "github.com/elastic/beats/v7/metricbeat/module/mongodb/collstats"
 	_ "github.com/elastic/beats/v7/metricbeat/module/mongodb/dbstats"

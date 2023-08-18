@@ -3,8 +3,6 @@ package trafficstatus
 import (
 	"fmt"
 
-	"github.com/pkg/errors"
-
 	"github.com/elastic/beats/v7/metricbeat/helper"
 	"github.com/elastic/beats/v7/metricbeat/mb"
 	"github.com/elastic/beats/v7/metricbeat/mb/parse"
@@ -60,7 +58,7 @@ func (m *MetricSet) Fetch(reporter mb.ReporterV2) error {
 
 	events, err := eventMapping(content)
 	if err != nil {
-		return errors.Wrap(err, "error fetching status")
+		return fmt.Errorf("error fetching status")
 	}
 
 	for _, event := range events {
