@@ -1,0 +1,6 @@
+- module: opendistro
+  metricsets: ["node_stats"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
