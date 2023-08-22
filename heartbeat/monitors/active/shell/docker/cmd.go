@@ -12,10 +12,14 @@ import (
 	"github.com/elastic/beats/v7/heartbeat/monitors/active/shell/util"
 )
 
-/**
+/*
+*
+
 	Add a eofcheck command to check whether the command is completed .
 	The length from header is not accurate if the command takes a while to run
-**/
+
+*
+*/
 func (d *DockerClient) readerToString(reader *bufio.Reader, eofcheck string) (string, error) {
 	header := make([]byte, 8) // [8]byte{STREAM_TYPE, 0, 0, 0, SIZE1, SIZE2, SIZE3, SIZE4}[]byte{OUTPUT}
 	var retByte bytes.Buffer
@@ -56,7 +60,7 @@ func (d *DockerClient) Run(dir, command string, args ...string) (string, error) 
 		logp.Info("Reconnect for %v", d.Filter)
 		err = d.Reconnect() // always Reconnect if it's failed in first connect
 		if err != nil {
-			logp.Err("Reconnect failed for %v", d.Filter)
+			logp.Err("Reconnect failed for %v ,reason is %v", d.Filter, err.Error())
 			return "", err
 		}
 	}

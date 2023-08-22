@@ -25,7 +25,7 @@ func Test_TCP_run_commnad(t *testing.T) {
 	client := NewDockerClient()
 	client.Endpoint = "tcp://20.228.150.232:2375"
 
-	client.Timeout = 60 * time.Second
+	client.Timeout = 12 * time.Second
 	client.Filter = []string{"name:mynginx1"}
 	output, err := client.Run("/tmp", "whoami")
 
