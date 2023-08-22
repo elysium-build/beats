@@ -44,9 +44,26 @@ func NewDockerClient() *DockerClient {
 	return d
 }
 
+func (d *DockerClient) ensureUnixSocketIsAbs() error {
+	if strings.HasPrefix(d.Endpoint, "tcp:") {
+		return nil
+	}
+	if !strings.HasPrefix(d.Endpoint, "unix:///") {
+		relativePath := d.Endpoint[len("unix://"):]
+		d.Endpoint = "unix:///" + relativePath
+
+	}
+	return nil
+}
+
 func (d *DockerClient) client() error {
 	d.dockerClientOnce.Do(func() {
 		var err error
+		err = d.ensureUnixSocketIsAbs()
+		if err != nil {
+			d.dockerClientErr = err
+			return
+		}
 		d.dockerClient, err = dclient.NewClientWithOpts(dclient.WithHost(d.Endpoint))
 		if err != nil {
 			d.dockerClientErr = err
