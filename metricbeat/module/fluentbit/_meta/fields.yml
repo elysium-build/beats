@@ -1,0 +1,10 @@
+- key: fluentbit
+  title: "fluentbit"
+  release: beta
+  description: >
+    fluentbit module
+  fields:
+    - name: fluentbit
+      type: group
+      description: >
+      fields:
