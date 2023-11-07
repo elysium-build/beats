@@ -1,0 +1,10 @@
+- key: servicenow
+  title: "servicenow"
+  release: beta
+  description: >
+    servicenow module
+  fields:
+    - name: servicenow
+      type: group
+      description: >
+      fields:
