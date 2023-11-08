@@ -1,0 +1,10 @@
+- key: shell
+  title: "shell"
+  release: beta
+  description: >
+    shell module
+  fields:
+    - name: shell
+      type: group
+      description: >
+      fields:

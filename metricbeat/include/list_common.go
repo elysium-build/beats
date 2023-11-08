@@ -160,6 +160,8 @@ import (
 	_ "github.com/elastic/beats/v7/metricbeat/module/redis/keyspace"
 	_ "github.com/elastic/beats/v7/metricbeat/module/servicenow"
 	_ "github.com/elastic/beats/v7/metricbeat/module/servicenow/metrics"
+	_ "github.com/elastic/beats/v7/metricbeat/module/shell"
+	_ "github.com/elastic/beats/v7/metricbeat/module/shell/command"
 	_ "github.com/elastic/beats/v7/metricbeat/module/squid"
 	_ "github.com/elastic/beats/v7/metricbeat/module/squid/info"
 	_ "github.com/elastic/beats/v7/metricbeat/module/system"
