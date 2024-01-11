@@ -25,7 +25,7 @@ func (c *LocalClient) Run(dir, command string, args ...string) (string, error) {
 	if dir != "" {
 		cmd.Dir = dir
 	}
-	output, err := cmd.Output()
+	output, err := cmd.CombinedOutput()
 
 	switch err.(type) {
 	case *exec.ExitError:

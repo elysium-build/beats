@@ -24,6 +24,7 @@ func Test_run_local_output(t *testing.T) {
 	f.Write([]byte(testdata))
 	f.Close()
 
+	// // out, err := comm.Run(folder, "/Users/yananxu/Desktop/kubectl.sh", "--pod=pgs-internal-0", "--password=postgres-pgs-internal.password", "--namespace=example", "--command=\"export PGPASSWORD=@password; psql -h localhost -p 5432 -U postgres -c 'explain analyze select * from pg_stat_all_indexes' 2>&1 | grep 'QUERY' | wc -l\"")
 	out, err := comm.Run(folder, "/bin/bash", "test.sh")
 	assert.Equal(t, "test test1\n", out)
 	assert.NoError(t, err, "Failed by running comm.Output")
