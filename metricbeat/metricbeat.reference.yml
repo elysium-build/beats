@@ -293,6 +293,14 @@ metricbeat.modules:
   period: 10s
   hosts: ["localhost:2379"]
 
+#------------------------------ Fluentbit Module ------------------------------
+- module: fluentbit
+  metricsets: ["metrics"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
 #-------------------------------- Golang Module --------------------------------
 - module: golang
   #metricsets:
@@ -613,6 +621,14 @@ metricbeat.modules:
   hosts: ["localhost:11211"]
   enabled: true
 
+#--------------------------------- Mfsm Module ---------------------------------
+- module: mfsm
+  metricsets: ["mbeaninfo"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
 #------------------------------- MongoDB Module -------------------------------
 - module: mongodb
   metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]
@@ -717,6 +733,14 @@ metricbeat.modules:
 
   # Path to server status. Default nginx_status
   server_status_path: "nginx_status"
+
+#------------------------------ Opendistro Module ------------------------------
+- module: opendistro
+  metricsets: ["node_stats"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
 
 #----------------------------- Openmetrics Module -----------------------------
 - module: openmetrics
@@ -872,6 +896,29 @@ metricbeat.modules:
 
   # Redis AUTH password. Empty by default.
   #password: foobared
+
+#------------------------------ Servicenow Module ------------------------------
+- module: servicenow
+  metricsets: ["metrics"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
+#-------------------------------- Shell Module --------------------------------
+- module: shell
+  metricsets: ["command"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
+#-------------------------------- Squid Module --------------------------------
+- module: squid
+  metricsets: ["info"]
+  enabled: false
+  period: 10s
+  hosts: ["tcp://127.0.0.1:3128"]
 
 #------------------------------- Traefik Module -------------------------------
 - module: traefik
