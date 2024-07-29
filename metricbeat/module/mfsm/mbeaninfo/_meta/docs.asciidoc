@@ -1,0 +1,1 @@
+This is the mbeaninfo metricset of the module mfsm.

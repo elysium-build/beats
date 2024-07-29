@@ -1,0 +1,10 @@
+- name: metrics
+  type: group
+  release: beta
+  description: >
+    metrics
+  fields:
+    - name: example
+      type: keyword
+      description: >
+        Example field

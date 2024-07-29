@@ -1,0 +1,10 @@
+- key: opendistro
+  title: "opendistro"
+  release: beta
+  description: >
+    opendistro module
+  fields:
+    - name: opendistro
+      type: group
+      description: >
+      fields:

@@ -1,0 +1,6 @@
+- module: shell
+  metricsets: ["command"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

@@ -1,0 +1,9 @@
+# Module: shell
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/7.17/metricbeat-module-shell.html
+
+- module: shell
+  metricsets: ["command"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

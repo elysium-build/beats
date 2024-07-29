@@ -1,0 +1,10 @@
+- name: command
+  type: group
+  release: beta
+  description: >
+    command
+  fields:
+    - name: example
+      type: keyword
+      description: >
+        Example field

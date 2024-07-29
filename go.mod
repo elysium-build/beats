@@ -12,7 +12,7 @@ require (
 	github.com/Azure/azure-event-hubs-go/v3 v3.3.15
 	github.com/Azure/azure-sdk-for-go v59.0.0+incompatible
 	github.com/Azure/azure-storage-blob-go v0.8.0
-	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
+	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
 	github.com/Azure/go-autorest/autorest v0.11.18
 	github.com/Azure/go-autorest/autorest/adal v0.9.15
 	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
@@ -51,7 +51,7 @@ require (
 	github.com/dgraph-io/badger/v3 v3.2103.1
 	github.com/digitalocean/go-libvirt v0.0.0-20180301200012-6075ea3c39a1
 	github.com/dlclark/regexp2 v1.1.7-0.20171009020623-7632a260cbaf // indirect
-	github.com/docker/docker v1.4.2-0.20190924003213-a8608b5b67c7
+	github.com/docker/docker v24.0.5+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/docker/go-metrics v0.0.1 // indirect
 	github.com/docker/go-plugins-helpers v0.0.0-20181025120712-1e6269c305b8
@@ -87,7 +87,7 @@ require (
 	github.com/gocarina/gocsv v0.0.0-20170324095351-ffef3ffc77be
 	github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e
 	github.com/godror/godror v0.10.4
-	github.com/gofrs/flock v0.7.2-0.20190320160742-5135e617513b
+	github.com/gofrs/flock v0.8.1
 	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
@@ -98,7 +98,7 @@ require (
 	github.com/google/gopacket v1.1.19
 	github.com/google/uuid v1.3.0
 	github.com/gorhill/cronexpr v0.0.0-20180427100037-88b0669f7d75
-	github.com/gorilla/mux v1.7.3
+	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/h2non/filetype v1.1.1
 	github.com/hashicorp/go-multierror v1.1.1
@@ -106,7 +106,7 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/hashicorp/nomad/api v0.0.0-20200303134319-e31695b5bbe6
 	github.com/hectane/go-acl v0.0.0-20190604041725-da78bae5fc95
-	github.com/insomniacslk/dhcp v0.0.0-20180716145214-633285ba52b2
+	github.com/insomniacslk/dhcp v0.0.0-20230516061539-49801966e6cb
 	github.com/jarcoal/httpmock v1.0.4
 	github.com/jmoiron/sqlx v1.2.1-0.20190826204134-d7d95172beb5
 	github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901
@@ -208,6 +208,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v1.1.1 // indirect
 	code.cloudfoundry.org/gofileutils v0.0.0-20170111115228-4d0c80011a0f // indirect
+	github.com/AdaLogics/go-fuzz-headers v0.0.0-20230811130428-ced1acdcaa24 // indirect
 	github.com/Azure/azure-amqp-common-go/v3 v3.2.1 // indirect
 	github.com/Azure/azure-pipeline-go v0.2.1 // indirect
 	github.com/Azure/go-amqp v0.16.0 // indirect
@@ -223,7 +224,6 @@ require (
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
-	github.com/containerd/containerd v1.5.13 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgraph-io/ristretto v0.1.0 // indirect
@@ -276,14 +276,16 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/iochan v1.0.0 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect
+	github.com/moby/term v0.5.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
-	github.com/pierrec/lz4/v4 v4.1.15 // indirect
+	github.com/pierrec/lz4/v4 v4.1.17 // indirect
+	github.com/rootless-containers/rootlesskit v1.1.1 // indirect
 	github.com/sanathkr/go-yaml v0.0.0-20170819195128-ed9d249f429b // indirect
 	github.com/santhosh-tekuri/jsonschema v1.2.4 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
+	github.com/sirupsen/logrus v1.9.2 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/urso/diag v0.0.0-20200210123136-21b3cc8eb797 // indirect
 	github.com/urso/go-bin v0.0.0-20180220135811-781c575c9f0e // indirect
@@ -311,7 +313,7 @@ replace (
 	github.com/Shopify/sarama => github.com/elastic/sarama v1.19.1-0.20210823122811-11c3ef800752
 	github.com/apoydence/eachers => github.com/poy/eachers v0.0.0-20181020210610-23942921fe77 //indirect, see https://github.com/elastic/beats/pull/29780 for details.
 	github.com/cucumber/godog => github.com/cucumber/godog v0.8.1
-	github.com/docker/docker => github.com/docker/engine v0.0.0-20191113042239-ea84732a7725
+	//github.com/docker/docker => github.com/docker/engine v0.0.0-20191113042239-ea84732a7725
 	github.com/docker/go-plugins-helpers => github.com/elastic/go-plugins-helpers v0.0.0-20200207104224-bdf17607b79f
 	github.com/dop251/goja => github.com/andrewkroh/goja v0.0.0-20190128172624-dd2ac4456e20
 	github.com/dop251/goja_nodejs => github.com/dop251/goja_nodejs v0.0.0-20171011081505-adff31b136e6
