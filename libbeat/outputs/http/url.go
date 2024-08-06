@@ -15,20 +15,38 @@
 // specific language governing permissions and limitations
 // under the License.
 
-package includes
+package http
 
 import (
-	// import queue types
-	_ "github.com/elastic/beats/v7/libbeat/outputs/codec/format"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/codec/json"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/console"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/elasticsearch"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/fileout"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/http"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/kafka"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/logstash"
-	_ "github.com/elastic/beats/v7/libbeat/outputs/redis"
-	_ "github.com/elastic/beats/v7/libbeat/publisher/queue/diskqueue"
-	_ "github.com/elastic/beats/v7/libbeat/publisher/queue/memqueue"
-	_ "github.com/elastic/beats/v7/libbeat/publisher/queue/spool"
+	"net/url"
+	"strings"
+
+	"github.com/elastic/beats/v7/libbeat/common"
 )
+
+func addToURL(urlStr string, params map[string]string) string {
+	if strings.HasSuffix(urlStr, "/") {
+		urlStr = strings.TrimSuffix(urlStr, "/")
+	}
+	if len(params) == 0 {
+		return urlStr
+	}
+	values := url.Values{}
+	for key, val := range params {
+		values.Add(key, val)
+	}
+	return common.EncodeURLParams(urlStr, values)
+}
+
+func parseProxyURL(raw string) (*url.URL, error) {
+	if raw == "" {
+		return nil, nil
+	}
+	parsedUrl, err := url.Parse(raw)
+	if err == nil && strings.HasPrefix(parsedUrl.Scheme, "http") {
+		return parsedUrl, err
+	}
+	// Proxy was bogus. Try prepending "http://" to it and
+	// see if that parses correctly.
+	return url.Parse("http://" + raw)
+}
