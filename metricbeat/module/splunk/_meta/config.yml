@@ -1,0 +1,6 @@
+- module: splunk
+  metricsets: ["metrics"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

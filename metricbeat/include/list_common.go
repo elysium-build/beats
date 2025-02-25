@@ -198,4 +198,6 @@ import (
 	_ "github.com/elastic/beats/v7/metricbeat/module/zookeeper/connection"
 	_ "github.com/elastic/beats/v7/metricbeat/module/zookeeper/mntr"
 	_ "github.com/elastic/beats/v7/metricbeat/module/zookeeper/server"
+	_ "github.com/elastic/beats/v7/metricbeat/module/splunk"
+	_ "github.com/elastic/beats/v7/metricbeat/module/splunk/metrics"
 )

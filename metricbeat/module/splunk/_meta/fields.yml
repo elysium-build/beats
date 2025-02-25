@@ -1,0 +1,10 @@
+- key: splunk
+  title: "splunk"
+  release: beta
+  description: >
+    splunk module
+  fields:
+    - name: splunk
+      type: group
+      description: >
+      fields:
