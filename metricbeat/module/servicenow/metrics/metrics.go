@@ -73,7 +73,7 @@ func (m *MetricSet) Fetch(report mb.ReporterV2) error {
 		Median                   string `xml:"median,attr"`
 		Min                      string `xml:"min,attr"`
 		Ninetypercent            string `xml:"ninetypercent,attr"`
-		NinetypercentTrimmedMean string `xml:"ninetypercentTrimmedMean,attr"`
+		NinetypercentTrimmedMean float64 `xml:"ninetypercentTrimmedMean,attr"`
 	}
 
 	type ServletMetric struct {
